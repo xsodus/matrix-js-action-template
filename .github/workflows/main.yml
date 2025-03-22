@@ -3,9 +3,14 @@ on: [push]
 jobs:
   example_matrix:
     strategy:
+      # The number of jobs to run in parallel based on the attribute matrix
+      # Let's say you have 2 jobs with 2 os and 2 node versions
+      # This will create 2 * 2 = 4 jobs
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        node-version: [20, 20]
+        os: 
+          - ubuntu-latest
+          - windows-latest
+        node-version: [20]
     name: A job to say hello with a custom action and matrix
     runs-on: ${{ matrix.os }}
     steps:  
