@@ -1,3 +1,3 @@
-export function printHello() {
-  console.log("Hello, world!");
+export function printHello(name) {
+  console.log(`Hello, ${name}`);
 }
