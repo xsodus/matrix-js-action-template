@@ -1,14 +1,14 @@
 # Setup, Build, and Run Guide
 
 ## Prerequisites
-1. Install [Node.js](https://nodejs.org/) (LTS version recommended).
+1. Install [Node.js](https://nodejs.org/) (LTS 20 version recommended).
 2. Install [npm](https://www.npmjs.com/) (comes with Node.js).
 3. Install [Git](https://git-scm.com/).
 
 ## Setup
 1. Clone the repository:
   ```bash
-  git clone https://github.com/your-username/matrix-js-action-template.git
+  git clone https://github.com/xsodus/matrix-js-action-template.git
   ```
 2. Navigate to the project directory:
   ```bash
