@@ -2,10 +2,10 @@
   "name": "matrix-js-action-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ncc build index.js"
+    "build": "npx ncc build src"
   },
   "keywords": [],
   "author": "",
