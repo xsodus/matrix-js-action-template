@@ -1,23 +1,45 @@
-# Hello world javascript action
+# Setup, Build, and Run Guide
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+## Prerequisites
+1. Install [Node.js](https://nodejs.org/) (LTS version recommended).
+2. Install [npm](https://www.npmjs.com/) (comes with Node.js).
+3. Install [Git](https://git-scm.com/).
 
-## Inputs
+## Setup
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/your-username/matrix-js-action-template.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd matrix-js-action-template
+  ```
+3. Install dependencies:
+  ```bash
+  npm install
+  ```
 
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
-
-## Example usage
-
-```yaml
-uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
-with:
-  who-to-greet: 'Mona the Octocat'
+## Build
+To build the project, run:
+```bash
+npm run build
 ```
+This will compile the source code and output the build files in the `dist` directory.
+
+## Run
+To execute the project, use:
+```bash
+npm start
+```
+
+## Testing
+Run the tests using:
+```bash
+npm test
+```
+
+## Additional Notes
+- Ensure your environment variables are correctly configured if required by the project.
+- Refer to the `package.json` file for additional scripts and configurations.
+- For detailed documentation, check the `docs` folder if available.
+- If you encounter any issues, open an issue in the repository.
