@@ -1,11 +1,14 @@
 on: [push]
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
-      
+  example_matrix:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node-version: [20, 20]
+    name: A job to say hello with a custom action and matrix
+    runs-on: ${{ matrix.os }}
+    steps:  
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
@@ -14,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-            node-version: '20'
+            node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -22,9 +25,9 @@ jobs:
      # Add a step to run the action
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
-        id: hello
+        id: custom-js-action
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.custom-js-action.outputs.time }}"
