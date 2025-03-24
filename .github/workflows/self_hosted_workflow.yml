@@ -13,25 +13,5 @@ jobs:
     name: A job to say hello with a custom action and matrix
     runs-on: self-hosted
     steps:  
-      # To use this repository's private action,
-      # you must check out the repository
-      - name: Checkout
-        uses: actions/checkout@v4
-      # Add a step to build the js-action
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-            node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-    # Add a step to run the action
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        id: custom-js-action
-        with:
-          who-to-greet: '${{ github.event.inputs.name }} from ${{ matrix.os }}'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.custom-js-action.outputs.time }}"
+      - name: Test self-hosted runner
+        run: echo "Hello world"
