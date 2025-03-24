@@ -1,4 +1,4 @@
-name: Testing custom JS action with matrix strategy
+name: Testing custom JS action with self-hosted runner
 
 on:
   workflow_dispatch:
@@ -10,18 +10,8 @@ on:
 
 jobs:
   example_matrix:
-    strategy:
-      # The number of jobs to run in parallel based on the attribute matrix
-      # Let's say you have 2 jobs with 2 os and 2 node versions
-      # This will create 2 * 2 = 4 jobs
-      matrix:
-        os: 
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-        node-version: [20]
     name: A job to say hello with a custom action and matrix
-    runs-on: ${{ matrix.os }}
+    runs-on: self-hosted
     steps:  
       # To use this repository's private action,
       # you must check out the repository
