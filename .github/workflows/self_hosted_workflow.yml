@@ -11,7 +11,7 @@ on:
 jobs:
   example_matrix:
     name: A job to say hello with a custom action and matrix
-    runs-on: self-hosted
+    runs-on: ['self-hosted', 'macOS', 'ARM64']
     steps:  
       - name: Test self-hosted runner
         run: echo "Hello world"
