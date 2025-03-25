@@ -26,6 +26,7 @@ jobs:
         run: |
           echo "Checking owner"
           id
+          cd /mnt/c/Users/banharn.pok
           pwd
           tar -xvzf actions-runner-linux-x64-2.323.0.tar.gz
       
