@@ -26,4 +26,6 @@ jobs:
         run: |
           echo "Checking owner"
           id
+          pwd
+          tar -xvzf actions-runner-linux-x64-2.323.0.tar.gz
       
