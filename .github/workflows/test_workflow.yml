@@ -16,6 +16,9 @@ jobs:
       # This will create 2 * 2 = 4 jobs
       matrix:
         os: 
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
           - self-hosted
         node-version: [20]
     name: A job to say hello with a custom action and matrix
