@@ -20,7 +20,6 @@ jobs:
           - macos-latest
           - windows-latest
           - self-hosted
-          - kkp-win-64
         node-version: [20]
     name: A job to say hello with a custom action and matrix
     runs-on: ${{ matrix.os }}
