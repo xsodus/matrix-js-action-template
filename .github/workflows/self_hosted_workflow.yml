@@ -11,7 +11,7 @@ on:
 jobs:
   example_matrix:
     name: A job to say hello with a custom action and matrix
-    runs-on: ['self-hosted', 'windows', 'x64']
+    runs-on: self-hosted
     env:
       ACTIONS_RUNNER_DEBUG: false
       ACTIONS_STEP_DEBUG: false
